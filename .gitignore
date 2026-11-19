@@ -1,0 +1,10 @@
+# modelo OCR (se descarga con el script de setup)
+Proy/tessdata/
+# entorno
+.venv/
+.env
+__pycache__/
+# índices generados
+Proy/data/index/
+Proy/data/processed/
+.DS_Store

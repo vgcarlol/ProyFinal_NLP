@@ -1,0 +1,117 @@
+# Manifiesto de fuentes autorizadas — LaboraGT (CC3103)
+# Cada documento indexado debe estar registrado aquí. El pipeline de ingesta
+# verifica el sha256 y reindexa solo los documentos cuyo hash cambió.
+# fecha_descarga: 2026-11-19
+
+documentos:
+  - id: codigo_trabajo
+    titulo: "Código de Trabajo, Decreto 1441 (edición conmemorativa MINTRAB, octubre 2024)"
+    archivo: raw/codigo_de_trabajo_decreto_1441.pdf
+    url: https://mintrabajo.gob.gt/wp-content/uploads/2026/06/Codigo-de-Trabajo.pdf
+    propietario: Congreso de la República / Ministerio de Trabajo y Previsión Social
+    formato: pdf_texto
+    paginas: 188
+    version: "2024-10"
+    vigencia_desde: null
+    vigencia_hasta: null
+    actualizacion: eventual (reformas legislativas)
+    access_level: publico
+    sha256: 8e1a91db07dbec03bb078d17e78af2277856c2b137870fe68d649ff2fdfc4855
+
+  - id: ley_aguinaldo
+    titulo: "Ley Reguladora de la Prestación del Aguinaldo para los Trabajadores del Sector Privado, Decreto 76-78"
+    archivo: raw/ley_aguinaldo_decreto_76-78.pdf
+    url: https://mintrabajo.gob.gt/wp-content/uploads/2026/06/Ley-Reguladora-del-Aguinaldo-Decreto-76-78.pdf
+    propietario: Congreso de la República / MINTRAB
+    formato: pdf_texto
+    paginas: 4
+    version: "76-78"
+    actualizacion: eventual
+    access_level: publico
+    sha256: 87a093701f4af4eb0c4f5e183f62c0a410e061e3aa7ded9742981f998093ecc2
+
+  - id: ley_bono14
+    titulo: "Ley de Bonificación Anual para Trabajadores del Sector Privado y Público (Bono 14), Decreto 42-92"
+    archivo: raw/ley_bono14_decreto_42-92.pdf
+    url: https://mintrabajo.gob.gt/wp-content/uploads/2026/06/Ley-de-Bonificacion-Anual-para-Trabajadores-del-Sector-Privado-y-Publico-Decreto-42-92.pdf
+    propietario: Congreso de la República / MINTRAB
+    formato: pdf_texto
+    paginas: 3
+    version: "42-92"
+    actualizacion: eventual
+    access_level: publico
+    sha256: 1ead327fe64ea8e1c2315c441e4247a6416de4664e1c67e780f2597c18e501dd
+
+  - id: bonificacion_incentivo
+    titulo: "Bonificación Incentivo, Decreto 78-89 (texto con reformas de los Decretos 7-2000 y 37-2001)"
+    archivo: raw/bonificacion_incentivo_decreto_78-89.pdf
+    url: https://legalambientalgt.com/wp-content/uploads/2021/06/DECRETO-DEL-CONGRESO-78-89.pdf
+    propietario: Congreso de la República (copia de recopilación legislativa)
+    formato: pdf_texto
+    paginas: 3
+    version: "78-89 reformado 37-2001"
+    actualizacion: eventual
+    access_level: publico
+    nota: "No se halló copia en el portal del MINTRAB; verificar contra el Diario de Centro América."
+    sha256: f3a8a740c97afd3ed6d34ab8e1516bc553f39980d9050e0efcd6f3ae1e22f56d
+
+  - id: bonificacion_incentivo_37_2001
+    titulo: "Decreto 37-2001 — Crea la bonificación incentivo de Q250 (Diario de Centro América, 6 de agosto de 2001)"
+    archivo: raw/bonificacion_incentivo_decreto_37-2001.pdf
+    url: https://www.congreso.gob.gt/detalle_pdf/decretos/367
+    propietario: Congreso de la República
+    formato: pdf_escaneado   # requiere OCR (tesseract, spa)
+    paginas: 2
+    version: "37-2001"
+    actualizacion: eventual
+    access_level: publico
+    nota: "La página 1 también contiene el final del Decreto 36-2001 (tributario); la limpieza debe conservar solo desde 'DECRETO NUMERO 37-2001'. Descargado manualmente (Incapsula bloquea la descarga automática)."
+    sha256: bc70455d91c362dd584bec91dd4b0c226f7546991641fc0bc94a37dccfbca412
+
+  - id: salario_minimo_2024
+    titulo: "Acuerdo Gubernativo 307-2023 — Salarios mínimos 2024"
+    archivo: raw/salario_minimo_2024_AG_307-2023.pdf
+    url: https://mintrabajo.gob.gt/wp-content/uploads/2026/06/Acuerdo-Gubernativo-Numero-307-2023-Salario-Minimo-2024.pdf
+    propietario: Presidencia de la República / MINTRAB
+    formato: pdf_escaneado   # requiere OCR (tesseract, spa)
+    paginas: 6
+    version: "2024"
+    vigencia_desde: 2024-01-01
+    vigencia_hasta: 2024-12-31
+    actualizacion: anual
+    access_level: publico
+    sha256: 4f6e62a6cb514fe22ad5cc2b55ef2bf1a800ea3bd83e08bf9d5a586b16192437
+
+  - id: salario_minimo_2025
+    titulo: "Acuerdo Gubernativo 264-2024 — Salarios mínimos 2025 (boletín resumen de Crowe Guatemala)"
+    archivo: raw/salario_minimo_2025_AG_264-2024.pdf
+    url: https://www.crowe.com/gt/-/media/crowe/firms/americas/gt/crowehorwathgt/boletines/salarios-minimos-para-2025-acuerdo-264-2024.pdf
+    propietario: Presidencia de la República / MINTRAB (resumen elaborado por Crowe Guatemala)
+    formato: pdf_texto
+    paginas: 2
+    version: "2025"
+    vigencia_desde: 2025-01-01
+    vigencia_hasta: 2025-12-31
+    actualizacion: anual
+    access_level: publico
+    nota: "Fuente secundaria: el texto oficial no está en el portal del MINTRAB. Reproduce los montos diarios y mensuales por circunscripción. Descargado manualmente por el autor (Cloudflare bloquea la descarga automática)."
+    sha256: 58370c8df243d63b1b0d3d67cd4dfc8f7e2e2abb1b022543fdd3f1748c4fd7a6
+
+  - id: salario_minimo_2026
+    titulo: "Acuerdo Gubernativo 256-2025 — Salarios mínimos 2026"
+    archivo: raw/salario_minimo_2026_AG_256-2025.pdf
+    url: https://mintrabajo.gob.gt/wp-content/uploads/2026/06/Acuerdo-Gubernativo-Numero-256-2025-Salario-Minino.pdf
+    propietario: Presidencia de la República / MINTRAB
+    formato: pdf_escaneado   # requiere OCR (tesseract, spa)
+    paginas: 5
+    version: "2026"
+    vigencia_desde: 2026-01-01
+    vigencia_hasta: null
+    actualizacion: anual
+    access_level: publico
+    sha256: 23d2b562ace7ddbcced7c6ccbdda1e9384113094502a2e5fccf9cd3e3448c55d
+
+# Pendientes (Fase 2): documentos sintéticos creados por el autor
+#  - reglamento_interno_demo   (access_level: interno)
+#  - politica_salarial_demo    (access_level: confidencial, solo RRHH)
+#  - empleados_demo.sqlite     (PII sintética, RBAC por rol)
