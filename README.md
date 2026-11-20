@@ -2,6 +2,10 @@
 
 Proyecto final de **CC3103 – Procesamiento de Lenguaje Natural** (UVG, ciclo 2 - 2026) · Carlos Valladares (221164).
 
+- **Video de presentación y demo:** https://youtu.be/8lSEhY-4do0
+- **Informe técnico:** [`Docs/Informe_Tecnico_LaboraGT.docx`](Docs/Informe_Tecnico_LaboraGT.docx)
+- **Presentación:** [`Docs/Presentacion_LaboraGT.pptx`](Docs/Presentacion_LaboraGT.pptx)
+
 LaboraGT responde consultas sobre el Código de Trabajo de Guatemala, las leyes de prestaciones (aguinaldo, Bono 14, bonificación incentivo) y los acuerdos de salario mínimo **citando documento, artículo, página y chunk**. Además:
 
 - calcula prestaciones con una **herramienta determinista**;

@@ -136,6 +136,48 @@ def P(t, bold_prefix=None, italic=False, size=None, align=None):
     return p
 
 
+VIDEO_URL = "https://youtu.be/8lSEhY-4do0"
+REPO_URL = "https://github.com/vgcarlol/ProyFinal_NLP"
+
+
+def link(paragraph, url, text=None, size=None):
+    """Hipervínculo real (clicable) dentro de un párrafo."""
+    r_id = paragraph.part.relate_to(url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+                                    is_external=True)
+    h = OxmlElement("w:hyperlink")
+    h.set(qn("r:id"), r_id)
+    run = OxmlElement("w:r")
+    rpr = OxmlElement("w:rPr")
+    color = OxmlElement("w:color")
+    color.set(qn("w:val"), "1A73E8")
+    u = OxmlElement("w:u")
+    u.set(qn("w:val"), "single")
+    rpr.extend([color, u])
+    if size:
+        sz = OxmlElement("w:sz")
+        sz.set(qn("w:val"), str(int(size * 2)))
+        rpr.append(sz)
+    run.append(rpr)
+    t = OxmlElement("w:t")
+    t.text = text or url
+    run.append(t)
+    h.append(run)
+    paragraph._p.append(h)
+
+
+def LP(label, url, size=None, align=None):
+    p = doc.add_paragraph()
+    r = p.add_run(label)
+    r.bold = True
+    if size:
+        r.font.size = Pt(size)
+    link(p, url, size=size)
+    if align is not None:
+        p.alignment = align
+    p.paragraph_format.space_after = Pt(3)
+    return p
+
+
 def BL(items, style="List Bullet"):
     for it in items:
         p = doc.add_paragraph(style=style)
@@ -216,6 +258,9 @@ for _ in range(4):
 P("Carlos Valladares — Carné 221164", size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
 P("Docente: Luis Esturbán", size=11, align=WD_ALIGN_PARAGRAPH.CENTER)
 P("Guatemala, noviembre de 2026", size=11, align=WD_ALIGN_PARAGRAPH.CENTER)
+doc.add_paragraph()
+LP("Video de la presentación: ", VIDEO_URL, size=10, align=WD_ALIGN_PARAGRAPH.CENTER)
+LP("Repositorio: ", REPO_URL, size=10, align=WD_ALIGN_PARAGRAPH.CENTER)
 doc.add_page_break()
 
 # ================================================================== 1 RESUMEN
@@ -513,6 +558,8 @@ P("Se utilizaron herramientas de IA generativa como apoyo puntual en la revisió
   "documentación técnica de bibliotecas. El detalle de su uso se declara conforme a la sección 15 de las reglas del curso.",
   italic=True)
 H("Anexo B. Reproducibilidad", 2)
+LP("Repositorio de código: ", REPO_URL)
+LP("Video de presentación y demostración: ", VIDEO_URL)
 BL(["Repositorio: README.md con instalación, ingesta, demo, benchmark y pruebas (pytest).",
     "Dependencias fijadas en Proy/requirements.txt; configuración en Proy/.env.example sin credenciales.",
     "Benchmark con fecha de referencia fija (TODAY=2026-11-19), temperatura 0 y semilla 42.",
