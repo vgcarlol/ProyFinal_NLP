@@ -1,0 +1,25 @@
+{
+  "system": "baseline_bm25",
+  "k": 5,
+  "n_cases": 20,
+  "timestamp": "2026-11-19T00:39:45",
+  "retrieval": {
+    "recall@k": 0.722,
+    "hit@k": 0.778,
+    "mrr": 0.551
+  },
+  "operation": {
+    "latency_mean_s": 15.039,
+    "latency_p95_s": 30.6,
+    "llm_calls_total": 20,
+    "prompt_tokens_mean": 1570.45,
+    "output_tokens_mean": 108.9,
+    "api_cost_usd": 0.0
+  },
+  "answer": {
+    "citation_precision": 0.735,
+    "abstention_accuracy": 0.9,
+    "abstention_on_unanswerable": 0.5,
+    "false_abstention_rate": 0.056
+  }
+}

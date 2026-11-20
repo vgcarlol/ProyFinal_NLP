@@ -16,6 +16,12 @@ documentos:
     vigencia_hasta: null
     actualizacion: eventual (reformas legislativas)
     access_level: publico
+    titulo_corto: "Código de Trabajo"
+    limpieza:
+      inicio: "^DECRETO NÚMERO 1441"   # descarta presentación de la edición conmemorativa (págs. 1-13)
+      # páginas biográficas y portadas decorativas de títulos (no son norma)
+      paginas_excluir: [16, 22, 54, 70, 86, 90, 104, 110, 118, 125, 126, 127, 137, 138, 155, 156,
+                        167, 168, 170, 174, 177, 178, 179, 181, 182, 184, 186, 187, 188]
     sha256: 8e1a91db07dbec03bb078d17e78af2277856c2b137870fe68d649ff2fdfc4855
 
   - id: ley_aguinaldo
@@ -28,6 +34,7 @@ documentos:
     version: "76-78"
     actualizacion: eventual
     access_level: publico
+    titulo_corto: "Ley del Aguinaldo (Decreto 76-78)"
     sha256: 87a093701f4af4eb0c4f5e183f62c0a410e061e3aa7ded9742981f998093ecc2
 
   - id: ley_bono14
@@ -40,6 +47,7 @@ documentos:
     version: "42-92"
     actualizacion: eventual
     access_level: publico
+    titulo_corto: "Ley del Bono 14 (Decreto 42-92)"
     sha256: 1ead327fe64ea8e1c2315c441e4247a6416de4664e1c67e780f2597c18e501dd
 
   - id: bonificacion_incentivo
@@ -53,6 +61,7 @@ documentos:
     actualizacion: eventual
     access_level: publico
     nota: "No se halló copia en el portal del MINTRAB; verificar contra el Diario de Centro América."
+    titulo_corto: "Bonificación Incentivo (Decreto 78-89)"
     sha256: f3a8a740c97afd3ed6d34ab8e1516bc553f39980d9050e0efcd6f3ae1e22f56d
 
   - id: bonificacion_incentivo_37_2001
@@ -66,6 +75,9 @@ documentos:
     actualizacion: eventual
     access_level: publico
     nota: "La página 1 también contiene el final del Decreto 36-2001 (tributario); la limpieza debe conservar solo desde 'DECRETO NUMERO 37-2001'. Descargado manualmente (Incapsula bloquea la descarga automática)."
+    titulo_corto: "Decreto 37-2001 (Bonificación Incentivo)"
+    limpieza:
+      inicio: "DECRETO NUMERO 37-2001"
     sha256: bc70455d91c362dd584bec91dd4b0c226f7546991641fc0bc94a37dccfbca412
 
   - id: salario_minimo_2024
@@ -80,6 +92,7 @@ documentos:
     vigencia_hasta: 2024-12-31
     actualizacion: anual
     access_level: publico
+    titulo_corto: "Salario mínimo 2024 (AG 307-2023)"
     sha256: 4f6e62a6cb514fe22ad5cc2b55ef2bf1a800ea3bd83e08bf9d5a586b16192437
 
   - id: salario_minimo_2025
@@ -95,6 +108,7 @@ documentos:
     actualizacion: anual
     access_level: publico
     nota: "Fuente secundaria: el texto oficial no está en el portal del MINTRAB. Reproduce los montos diarios y mensuales por circunscripción. Descargado manualmente por el autor (Cloudflare bloquea la descarga automática)."
+    titulo_corto: "Salario mínimo 2025 (AG 264-2024)"
     sha256: 58370c8df243d63b1b0d3d67cd4dfc8f7e2e2abb1b022543fdd3f1748c4fd7a6
 
   - id: salario_minimo_2026
@@ -109,9 +123,50 @@ documentos:
     vigencia_hasta: null
     actualizacion: anual
     access_level: publico
+    titulo_corto: "Salario mínimo 2026 (AG 256-2025)"
     sha256: 23d2b562ace7ddbcced7c6ccbdda1e9384113094502a2e5fccf9cd3e3448c55d
 
-# Pendientes (Fase 2): documentos sintéticos creados por el autor
-#  - reglamento_interno_demo   (access_level: interno)
-#  - politica_salarial_demo    (access_level: confidencial, solo RRHH)
-#  - empleados_demo.sqlite     (PII sintética, RBAC por rol)
+  # --- Documentos sintéticos creados por el autor (empresa ficticia) ---
+  - id: reglamento_interno_demo
+    titulo: "Reglamento Interior de Trabajo — Comercial Demo, S.A. (sintético)"
+    titulo_corto: "Reglamento Interno Comercial Demo"
+    archivo: synthetic/reglamento_interno_comercial_demo.md
+    url: null
+    propietario: Autor del proyecto (documento sintético)
+    formato: markdown
+    version: "2026-1"
+    vigencia_desde: 2026-01-01
+    actualizacion: por versión
+    access_level: interno
+    sha256: b4c80cbf2b99e86203f897feebdf742ac54939a5c181c75272bff3eb0e62d3be
+
+  - id: politica_salarial_demo
+    titulo: "Política Salarial y de Compensación — Comercial Demo, S.A. (sintético, confidencial)"
+    titulo_corto: "Política Salarial Comercial Demo"
+    archivo: synthetic/politica_salarial_comercial_demo.md
+    url: null
+    propietario: Autor del proyecto (documento sintético)
+    formato: markdown
+    version: "2026-1"
+    vigencia_desde: 2026-01-01
+    actualizacion: por versión
+    access_level: confidencial   # solo rol RRHH
+    sha256: e5a2e2d3ccb39f6cf26521f19c00fbc44426912bf4bd16d232c6e7385ba30b85
+
+
+  - id: boletin_envenenado_demo
+    titulo: "Boletín informativo de RRHH — Comercial Demo (sintético; incluye una inyección indirecta de prueba)"
+    titulo_corto: "Boletín RRHH Comercial Demo"
+    archivo: synthetic/boletin_rrhh_envenenado_demo.md
+    url: null
+    propietario: Autor del proyecto (documento sintético de prueba de seguridad)
+    formato: markdown
+    version: "2026-11"
+    vigencia_desde: 2026-11-01
+    actualizacion: mensual
+    access_level: interno
+    nota: "Su artículo 2 contiene instrucciones maliciosas; la ingesta debe ponerlo en cuarentena."
+    sha256: 4cdcade10f7dbe2a82b2fc5f8c56e43f9166abf13efbc5c930f228bb141bd2a5
+
+# Base de datos sintética (no se indexa): synthetic/empleados_demo.sqlite — 50 empleados ficticios,
+# generada por scripts/ingest.py (semilla fija). Usada por la herramienta consultar_empleado con RBAC.

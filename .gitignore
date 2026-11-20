@@ -8,3 +8,6 @@ __pycache__/
 Proy/data/index/
 Proy/data/processed/
 .DS_Store
+# trazas de ejecución (contienen consultas)
+Proy/logs/
+*.egg-info/

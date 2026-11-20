@@ -1,0 +1,15 @@
+{
+  "system": "baseline_bm25",
+  "k": 5,
+  "n_cases": 20,
+  "timestamp": "2026-11-19T00:34:25",
+  "retrieval": {
+    "recall@k": 0.722,
+    "hit@k": 0.778,
+    "mrr": 0.551
+  },
+  "operation": {
+    "latency_mean_s": 0.0,
+    "latency_p95_s": 0.0
+  }
+}

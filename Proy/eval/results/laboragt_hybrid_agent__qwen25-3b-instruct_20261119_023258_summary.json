@@ -1,0 +1,31 @@
+{
+  "system": "laboragt_hybrid_agent__qwen25-3b-instruct",
+  "k": 5,
+  "n_cases": 27,
+  "timestamp": "2026-11-19T02:32:58",
+  "retrieval": {
+    "recall@k": 0.972,
+    "hit@k": 1.0,
+    "mrr": 0.812,
+    "redundancy": 0.022
+  },
+  "operation": {
+    "latency_mean_s": 10.101,
+    "latency_p95_s": 18.922,
+    "llm_calls_total": 25,
+    "prompt_tokens_mean": 1363.889,
+    "output_tokens_mean": 125.556,
+    "api_cost_usd": 0.0
+  },
+  "answer": {
+    "citation_precision": 0.885,
+    "abstention_accuracy": 0.75,
+    "abstention_on_unanswerable": 1,
+    "false_abstention_rate": 0.278
+  },
+  "tools": {
+    "n": 7,
+    "tool_selection_accuracy": 1,
+    "tool_case_accuracy": 1
+  }
+}

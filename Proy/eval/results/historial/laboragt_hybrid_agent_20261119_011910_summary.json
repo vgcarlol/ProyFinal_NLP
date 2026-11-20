@@ -1,0 +1,33 @@
+{
+  "system": "laboragt_hybrid_agent",
+  "k": 5,
+  "n_cases": 27,
+  "timestamp": "2026-11-19T01:19:10",
+  "retrieval": {
+    "recall@k": 0.861,
+    "hit@k": 0.889,
+    "mrr": 0.787,
+    "redundancy": 0.024
+  },
+  "operation": {
+    "latency_mean_s": 17.017,
+    "latency_p95_s": 35.553,
+    "llm_calls_total": 25,
+    "prompt_tokens_mean": 1211.407,
+    "output_tokens_mean": 101.37,
+    "api_cost_usd": 0.0
+  },
+  "answer": {
+    "citation_precision": 0.867,
+    "abstention_accuracy": 0.85,
+    "abstention_on_unanswerable": 1,
+    "false_abstention_rate": 0.167,
+    "faithfulness": 0.832,
+    "judge_correctness": 0.75
+  },
+  "tools": {
+    "n": 7,
+    "tool_selection_accuracy": 1,
+    "tool_case_accuracy": 1
+  }
+}

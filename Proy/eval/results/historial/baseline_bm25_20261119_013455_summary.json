@@ -1,0 +1,33 @@
+{
+  "system": "baseline_bm25",
+  "k": 5,
+  "n_cases": 27,
+  "timestamp": "2026-11-19T01:34:55",
+  "retrieval": {
+    "recall@k": 0.722,
+    "hit@k": 0.778,
+    "mrr": 0.542,
+    "redundancy": 0.0
+  },
+  "operation": {
+    "latency_mean_s": 13.068,
+    "latency_p95_s": 27.687,
+    "llm_calls_total": 27,
+    "prompt_tokens_mean": 1611.148,
+    "output_tokens_mean": 143.667,
+    "api_cost_usd": 0.0
+  },
+  "answer": {
+    "citation_precision": 0.556,
+    "abstention_accuracy": 0.85,
+    "abstention_on_unanswerable": 0.5,
+    "false_abstention_rate": 0.111,
+    "faithfulness": 0.77,
+    "judge_correctness": 0.55
+  },
+  "tools": {
+    "n": 7,
+    "tool_selection_accuracy": 0.143,
+    "tool_case_accuracy": 0
+  }
+}
